@@ -14,7 +14,7 @@ async function generateResponse() {
         requestCount = Math.max(0, requestCount - 1);
     }, resetTime);
 
-    const apiKey = 'YOUR API KEY'; // Replace with your actual API key
+    const apiKey = 'YOUR API KEY'; // Replace with your actual API key.
     const userPrompt = document.getElementById('prompt').value;
     const imageUrl = document.getElementById('imageUrl').value;
 
