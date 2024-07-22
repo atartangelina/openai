@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI API Demo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #4A90E2;
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #555;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+            margin-bottom: 10px;
+        }
+        input[type="text"]:focus {
+            border-color: #4A90E2;
+            outline: none;
+        }
+        button {
+            padding: 12px 20px;
+            background-color: #4A90E2;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #357ABD;
+            transform: translateY(-2px);
+        }
+        #response {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f4fd;
+            border: 1px solid #c1e1f5;
+            border-radius: 5px;
+            font-size: 1.1em;
+            min-height: 50px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>OpenAI API Demo</h1>
+    <label for="prompt">Ask a question:</label>
+    <input type="text" id="prompt" name="prompt" placeholder="Type your question here...">
+    <button onclick="generateResponse()">Get answer</button>
+    <br>
+    <label for="imageUrl">Image URL:</label>
+    <input type="text" id="imageUrl" name="imageUrl" placeholder="Enter image URL here...">
+    <button onclick="processImageUrl()">Submit image URL</button>
+    <div id="response"></div>
+    <script src="script.js"></script>
+</body>
+</html>
